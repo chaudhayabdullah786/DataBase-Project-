@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifecare Hospital</title>
+    <!-- <link rel="stylesheet" href="webstyle1.css"> -->
+    <style>
+        .content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 70px;
+
+}
+#nope{
+    background-color: lightyellow;
+    width: 30%;
+    padding: 1%;
+    border: 1px solid wheat;
+    border-radius: 20px;
+}
+#nope1{
+    background-color: lightyellow;
+    width: 10%;
+    padding: 1%;
+    border: 1px solid wheat;
+    border-radius: 20px;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(bg_1.jpg);
+    background-size:cover ;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background: url('hospital-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    padding: 80px 20px 20px; /* Padding adjusted to account for fixed header */
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+
+                <li><a href="main.html">Home</a></li>
+                <li><a href="patient.html">Patient_Information</a></li>
+                <li><a href="Doctor.html">Doctor_Information</a></li>
+                <li><a href="Appointments.html">Appointments </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 style="color: red; background-color: rgba(255, 255, 255, 0.5);">Life Care</h1>
+        <h1>Welcome to Lifecare Hospital</h1>
+        <div class="content">
+            
+        <div >
+            <h2>Appointments Information Form</h2>
+                    <form action="inser2.php" method="post">
+                    <b style=" color: crimson;">DOCTOR_ID:</b>
+                    <input id="nope" type="text" name="Doctor_id" placeholder="Enter the Id" required><br><br>
+                    <b style=" color: crimson;">PATIENT_ID :</b>
+                    <input id="nope" type="text" name="PATIENT_ID" required placeholder="enter name"><br><br>
+                    <b style=" color: crimson;"> date_of_birth</b>
+                    <input id="nope" type="date" name="date_of_birth" placeholder="Enter the date_of_birth" required><br><br>
+                    <button id="nope1" type="submit">SUBMIT</button>
+                   
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+
+        </div>
+    </main>
+</body>
+</html>

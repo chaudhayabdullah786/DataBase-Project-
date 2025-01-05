@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url(bg_1.jpg);
+    background-size:cover ;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5); /* Transparent background */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 25px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background: url('hospital-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    padding: 80px 20px 20px; /* Padding adjusted to account for fixed header */
+    text-align: center;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+#nope{
+    background-color: lightyellow;
+    width: 30%;
+    padding: 1%;
+    border: 1px solid wheat;
+    border-radius: 20px;
+}
+#nope1{
+    background-color: lightyellow;
+    width: 20%;
+    padding: 1%;
+    border: 1px solid wheat;
+    border-radius: 20px;
+}

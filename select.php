@@ -1,0 +1,109 @@
+<?php  
+include 'Connect.php';
+echo "<br><h1>DETAILS OF ALL DOCTORS RECORDS</h1></br>";
+$sql = "Select * From doctor";
+$result = $conn-> query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table border = 5px>
+            <tr>
+                <th>Doctor_id</th>
+                <th>Doctor_name</th>
+                <th>Specialization</th>
+                <th> Qualification</th>
+                <th> contact-number</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+            </tr>";
+
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>
+                    <td>".$row['Doctor_id']."</td>
+                    <td>".$row['Doctor_name']."</td>
+                    <td>".$row['Specialization']."</td>
+                    <td>".$row['Qualification']."</td>
+                    <td>".$row['contact_number']."</td>
+                    <td><button type = submit class = b><a href = Update.php>UPDATE</a></button></td>
+                    <td><button type = submit class = b1><a href = check.php>DELETE</a></button></td>
+
+                </tr>";
+    } //while
+    echo "</table>";
+} else{
+    echo "No Result Found";
+} //if
+echo "<br><br><button type = submit class = b2><a href = Doctor.html>+ ADD Doctor</a></button></br></br>";
+    
+
+echo "<style>
+h1{
+    font-family: Arial Black;
+    font-size: 50px;
+    background-color: springgreen;
+    color: black;
+    text-align: center;
+}
+
+table{
+    text-align: center;
+    margin-left: 15%;
+}
+th{
+    font-size: 20px;
+    color: red;
+    font-family: Arial Black;
+    background-color: aqua;
+}
+
+td{
+    font-size: 18px;
+    color: white;
+    font-family: Arial Black;
+    color: black 
+}
+
+a{
+    text-decoration: none
+}
+
+.b{
+    background-color: springgreen;
+    color: black;
+    font-family: Arial Black;
+    font-size: 16px;
+}
+.b:hover{
+    background-color: springgreen;
+    transition: 0.8s;
+    transform: scale(1.0);
+}
+.b1{
+    background-color: red;
+    color: black;
+    font-family: Arial Black;
+    font-size: 16px;
+}
+.b1:hover{
+    background-color: red;
+    transition: 0.8s;
+    transform: scale(1.0);
+}
+.b2{
+    width: 50%;
+    height: 5%;
+    background-color: ghostwhite;
+    color: black;
+    text-align: center;
+    font-family: Arial Black;
+    font-size: 20px;
+    text-decoration: none;
+    float: left;
+    margin-left: 25%;
+}
+.b2:hover{
+    background-color: springgreen;
+    transition: 0.8s;
+    transform: scale(1.0);
+}
+</style>";
+ ?>

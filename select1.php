@@ -1,0 +1,107 @@
+<?php  
+include 'Connect.php';
+echo "<br><h1>DETAILS OF ALL PATIENT RECORDS</h1></br>";
+$sql = "Select * From patient";
+$result = $conn-> query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table border = 5px>
+            <tr>
+                <th>patient_id</th>
+                <th>patient_name</th>
+                <th>date_of_birth</th>
+                <th>contact-number</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+            </tr>";
+
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>
+                    <td>".$row['patient_id']."</td>
+                    <td>".$row['patient_name']."</td>
+                    <td>".$row['date_of_birth']."</td>
+                    <td>".$row['contact_number']."</td>
+                    <td><button type = submit class = b><a href = Update1.php>UPDATE</a></button></td>
+                    <td><button type = submit class = b1><a href = check1.php>DELETE</a></button></td>
+
+                </tr>";
+    } //while
+    echo "</table>";
+} else{
+    echo "No Result Found";
+} //if
+echo "<br><br><button type = submit class = b2><a href = patient.html>+ ADD PATIENT</a></button></br></br>";
+    
+
+echo "<style>
+h1{
+    font-family: Arial Black;
+    font-size: 50px;
+    background-color: green;
+    color: black;
+    text-align: center;
+}
+
+table{
+    text-align: center;
+    margin-left: 15%;
+}
+th{
+    font-size: 20px;
+    color: red;
+    font-family: Arial Black;
+    background-color: aqua;
+}
+
+td{
+    font-size: 18px;
+    color: white;
+    font-family: Arial Black;
+    color: black 
+}
+
+a{
+    text-decoration: none
+}
+
+.b{
+    background-color: springgreen;
+    color: black;
+    font-family: Arial Black;
+    font-size: 16px;
+}
+.b:hover{
+    background-color: springgreen;
+    transition: 0.8s;
+    transform: scale(1.0);
+}
+.b1{
+    background-color: red;
+    color: black;
+    font-family: Arial Black;
+    font-size: 16px;
+}
+.b1:hover{
+    background-color: red;
+    transition: 0.8s;
+    transform: scale(1.0);
+}
+.b2{
+    width: 50%;
+    height: 5%;
+    background-color: ghostwhite;
+    color: black;
+    text-align: center;
+    font-family: Arial Black;
+    font-size: 20px;
+    text-decoration: none;
+    float: left;
+    margin-left: 25%;
+}
+.b2:hover{
+    background-color: green;
+    transition: 0.8s;
+    transform: scale(1.0);
+}
+</style>";
+ ?>
